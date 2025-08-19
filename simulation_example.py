@@ -72,7 +72,7 @@ def get_random_params():
 
 
 smplx_layer = SMPLXLayer(
-    '/is/cluster/fast/sbian/github/BEDLAM/data/body_models/smplx/models/smplx/SMPLX_NEUTRAL.pkl',
+    '/home/ids/liliu/data/body_models/models/smplx/SMPLX_NEUTRAL.pkl',
     ext='pkl',
     num_betas=300
 ).to(device)
@@ -106,10 +106,10 @@ if __name__ == "__main__":
     if not os.path.exists(saved_folder):
         os.makedirs(saved_folder)
         
-    motion_path = 'assets/male_31_us_1190_0022_300.npz'
-    lower_garment_obj = 'assets/valid_garment_target_long_pants_wb_sim.obj'
-    upper_garment_obj = 'assets/valid_garment_longshirt_sim.obj'
-    rest_smplx_params_path = 'assets/aaa_mesh_registrarion/registered_params.pkl'
+    motion_path = '../assets/eval/male_31_us_1190_0022_300.npz'
+    lower_garment_obj = '../assets/eval/valid_garment_target_long_pants_wb_sim.obj'
+    upper_garment_obj = '../assets/eval/valid_garment_longshirt_sim.obj'
+    rest_smplx_params_path = '../assets/eval/aaa_mesh_registrarion/registered_params.pkl'
     obj_path = os.path.join(saved_folder, 'combined_garment.obj')
 
     if True:
